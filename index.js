@@ -20,7 +20,7 @@ let cardElement = document.getElementById('card-text');
 let errHeading = document.getElementById('error-heading');
 let Ftemp = false;
 let url;
-rootElement.style.backgroundImage="url('./assets/snow.jpg')";
+rootElement.style.backgroundImage="url('./assets/default.jpg')";
 
 function getData(){
     apiData(searchElement.value)
@@ -59,7 +59,7 @@ async function apiData(city,value,lat,lon){
 
     //updating sunrise and sun set values
     sunriseElement.innerHTML="Sunrise - " + formatter.format(dateConverter(sys.sunrise,timezone)).split(" ")[1];
-    sunsetElement.innerHTML="Sunsnet - " + formatter.format(dateConverter(sys.sunset,timezone)).split(" ")[1];
+    sunsetElement.innerHTML="Sunset - " + formatter.format(dateConverter(sys.sunset,timezone)).split(" ")[1];
 
 
     tempValues(main,wind,Ftemp);
@@ -92,8 +92,11 @@ const formatter = new Intl.DateTimeFormat('en-US', {
 //backgrounds function
 function backGrounds(data){
     switch(data){
-        case "Rain" || "Drizzle" || "Thunderstorm":
+        case "Rain" || "Drizzle":
             setBg('./assets/rainy1.jpg');
+            break;
+        case "Thunderstorm":
+            setBg('./assets/thunder.jpg');
             break;
         case "Clouds":
             setBg('./assets/cloudy.jpg');
@@ -107,7 +110,7 @@ function backGrounds(data){
         case "Snow":
             setBg('./assets/snow.jpg')
         default:
-            setBg('./assets/Backbg.jpg');
+            setBg('./assets/default.jpg');
     }
 }
 
