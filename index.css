@@ -121,17 +121,25 @@ box-shadow: 29px 24px 46px 1px rgba(0,0,0,0.6),
     padding: 0px 10px 0px 10px;
     border-radius: 5px;
     cursor: pointer;
-    border: solid 1px black;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
+    background-color: transparent;
+    color: black;
+    border: solid 1px black;
 }
 .searchBtn{
-    border: solid 1px black;
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Ubuntu', sans-serif;
-
+    background-color: transparent;
+    color: black;
+    border: solid 1px black;
+}
+.convertBtn:hover, .searchBtn:hover{
+    background-color: black;
+    color: white;
+    border: solid 1px black;
 }
 .sun-set{
     border: solid black;
