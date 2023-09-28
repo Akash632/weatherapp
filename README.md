@@ -19,6 +19,6 @@ input field where users can enter a location and a button to trigger the weather
 
 I have added comments in the code for more readability. Please refer them for further code explanation
 
-Live link - 
+Live link - https://65156089b43acf113a2e15b2--wondrous-shortbread-d393b6.netlify.app/
 
 Link for github - https://github.com/Akash632/weatherapp
