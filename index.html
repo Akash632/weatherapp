@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container" id="main-container">
+        <div class="container">
+            <div class="card-container">
+                <div class="card-image">
+                    <img src="./assets/snow.jpg" id="card-img"/>
+                </div>
+                <div class="card-text" id="card-text">
+                    <div class="card-text-container" id="card-Text">
+                        <div class="search-container">
+                            <input type="text" placeholder="Search" id="search"/>
+                            <button onclick="getData()" class="searchBtn">Search</button>
+                            <button onclick="changeTemp()" id="degreeBtn" class="convertBtn">
+                                F&#176;
+                            </button>
+                        </div>
+                        <div class="temp-container">
+                                <h1 id="temp">-</h1>
+                                <div class="temp-text-container">
+                                <h2 id="city">-</h2>
+                                <p id="date">-</p>
+                                </div>
+                                <div class="icon-container">
+                                    <img src="http://openweathermap.org/img/w/10d.png" id="icon"/>
+                                    <h4 id="status">-</h4>
+                                </div>
+                        </div>
+                        <div class="sun-set">
+                                <div>
+                                    <img src="./assets/sunrise.png"/>
+                                    <h4 id="sunrise">Sunrise -</h4>
+                                </div>
+                                <div>
+                                    <img src="./assets/sunset.png"/>
+                                    <h4 id="sunset">Sunset -</h4>
+                                </div>
+                        </div>
+                        <div class="description">
+                            <div>
+                                <h3 id="max">Max - </h3>
+                                <h3 id="pressure">Pressure - </h3>
+                                <h3 id="wind">Wind - </h3>
+                            </div>
+                            <div>
+                                <h3 id="min">Min - </h3>
+                                <h3 id="humid">Humidity - </h3>
+                                <h3 id="feels">Feels - </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="error-message" id="error">
+                    <h1 id="error-heading">City not found</h1>
+                <button onclick="back()">Try again</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

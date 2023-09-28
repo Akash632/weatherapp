@@ -1,0 +1,320 @@
+*{
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+body{
+    /* background: #111; */
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(33, 33, 33);
+}
+.main-container{
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    position: relative;
+    transition: 500ms;
+    background-size: cover;
+    opacity: 1;
+    width: 100%;
+}
+.main-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 0;
+}
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 3em 4em 3em;
+}
+.card-container{
+    display: flex;
+    width: 70%;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.97);
+    color: #262626;
+    border-radius: 10px;
+box-shadow: 29px 24px 46px 1px rgba(0,0,0,0.6),
+0px 45px 26px 0px rgba(0,0,0,0.14);
+}
+.card-text{
+    padding: 30px;
+    width: 45%;
+    display: block;
+}
+.card-text{
+    padding: 30px;
+    width: 45%;
+}
+.card-text-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.card-image{
+    width:60%;
+}
+.card-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.temp-container{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border: solid black;
+     border-width: 0px 0px 1px 0px;
+     width: 100%;
+     margin: 10px 0 20px 0px;
+}
+.temp-text-container h2{
+    margin: 0px 0px 5px 0px;
+}
+.temp-text-container p{
+    font-size: 15px;
+}
+.temp-container h1{
+    font-size: 5rem;
+}
+.icon-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon-container img{
+    width: 60%;
+    margin: 5px;
+}
+.search-container{
+    display: flex;
+    justify-content: space-between;
+}
+.search-container input{
+    border: solid black;
+    border-width: 0px 0px 1px 0px;
+    padding: 8px;
+    font-size: 15px;
+    width: 70%;
+    font-family: 'Ubuntu', sans-serif;
+}
+.search-container input:focus{
+    outline: none;
+}
+.convertBtn{
+    padding: 0px 10px 0px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: solid 1px black;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+.searchBtn{
+    border: solid 1px black;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+.sun-set{
+    border: solid black;
+    border-width: 0px 0px 1px 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 5px 0px;
+}
+.sun-set>div>img{
+    width:40px;
+    margin: 0px 10px 0px 0px;
+}
+.sun-set>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0px 0px 0px;
+}
+.description div h3{
+    margin: 0px 0px 10px 0px;
+    font-size: 18px;
+}
+.error-message{
+    display: none;
+    text-align: center;
+    padding: 50px;
+    width: 45%;
+    border: solid 1px black;
+}
+.error-message button{
+    margin: 20px 0px 20px 0px;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+
+/* media queries */
+
+@media screen and (min-width:320px) and (max-width:576px){
+    .container{
+        padding: 2em 2em 2em 2em;
+    }
+    .search-container input{
+        font-size: 12px;
+        padding: 2px;
+        width: 60%;
+    }
+    .search-container button{
+        font-size: 12px;
+    }
+    .card-container{
+        flex-direction: column;
+        width: 100%;
+        height: 550px;
+    }
+    .card-image{
+        width: 100%;
+        height: 40%;
+    }
+    .card-text{
+        width: 100%;
+        padding: 15px;
+        height: 100%;
+    }
+    #temp{
+        font-size: 50px;
+    }
+    #city{
+        font-size: 20px;
+    }
+    #date{
+        font-size: 12px;
+    }
+    .icon-container img{
+        width: 30%;
+    }
+    #status{
+        font-size: 12px;
+    }
+    .sun-set div img{
+        width: 25%;
+    }
+    .sun-set div h4{
+        font-size: 15px;
+    }
+    .description div h3{
+        font-size: 15px;
+    }
+    .error-message{
+        width: 100%;
+    }
+}
+@media screen and (min-width:577px) and (max-width:769px){
+    .container{
+        padding: 2em 1em 2em 1em;
+    }
+    .card-container{
+        width: 90%;
+    }
+    .search-container input{
+        font-size: 13px;
+        padding: 1px;
+        width: 55%;
+    }
+    .search-container button{
+        font-size: 13px;
+    }
+    #temp{
+        font-size: 50px;
+    }
+    #city{
+        font-size: 15px;
+    }
+    #date{
+        font-size: 10px;
+    }
+    .icon-container img{
+        width: 45%;
+    }
+    #status{
+        font-size: 12px;
+    }
+    .description div h3{
+        font-size: 15px;
+    }
+    .card-text{
+        padding: 15px;
+    }
+    .sun-set div img{
+        width: 23%;
+    }
+    .sun-set div h4{
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1025px){
+    .container{
+        padding: 2em 1em 2em 1em;
+    }
+    .card-container{
+        width: 90%;
+    }
+    .card-text{
+        padding: 15px;
+    }
+    .search-container input{
+        padding: 2px;
+        width: 62%;
+    }
+    .search-container button{
+        font-size: 13px;
+    }
+    #temp{
+        font-size: 65px;
+    }
+    #city{
+        font-size: 18px;
+    }
+    #date{
+        font-size: 12px;
+    }
+    .icon-container img{
+        width: 45%;
+    }
+    #status{
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width:1025px) and (max-width:1440px){
+    .container{
+        padding: 2em 1em 2em 1em;
+    }
+    .card-container{
+        width: 90%;
+    }
+
+}
